@@ -5,6 +5,7 @@
     <title></title>
   </head>
   <body>
+
     <div>
       <ul>
         {% if user.is_authenticated %}
@@ -32,14 +33,19 @@
         {% endif %}
       </ul>
     </div>
-    {% if user.is_authenticated %}
-      <h1>
-        User is auth
-      </h1>
-    {% else %}
-      <h1>
-          User isn't auth
-      </h1>
-    {% endif %}
+
+    <div class="">
+      {% if user.is_authenticated %}
+        <h1>
+          User is auth
+        </h1>
+      {% else %}
+        <h1>
+            User isn't auth
+        </h1>
+      {% endif %}
+    </div>
+
+
   </body>
 </html>

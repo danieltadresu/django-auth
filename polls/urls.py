@@ -6,7 +6,8 @@ from polls.views import (
     getLogOut,
     postLogIn,
     getSignUp,
-    postSignUp
+    postSignUp,
+    getDummyUrl
 )
 
 urlpatterns = [
@@ -16,4 +17,5 @@ urlpatterns = [
     path('login/auth/', postLogIn, name='postLogIn'),
     path('signup/', getSignUp, name='getSignUp'),
     path('signup/auth/', postSignUp, name='postSignUp'),
+    path('dummy/', getDummyUrl, name='getDummyUrl')
 ]

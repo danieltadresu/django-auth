@@ -42,3 +42,10 @@ def postSignUp(request):
 def getLogOut(request):
     logout(request)
     return render(request, 'index.html')
+
+def getDummyUrl(request):
+    if not request.user.is_authenticated:
+        print('User does not credentials!')
+    else:
+        print('User with perms!')
+    return render(request, 'dummy.html')
